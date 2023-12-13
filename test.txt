@@ -1,0 +1,132 @@
+
+const inc = (function () {
+    return function f(base, value = 1) {
+        return base + value;
+    };
+})();
+
+const dec = (function () {
+    return function f(base, value = 1) {
+        return base - value;
+    };
+})();
+
+console.log(inc(8, 4));
+console.log(dec(58));
+
+///////////
+// function checkSign (num) {
+//   return num > 0 ? "positive" : num < 0 ? "negative" : "zero";
+// }
+const checkSign  = num => num > 0 ? "positive" : num < 0 ? "negative" : "zero";
+
+console.log(checkSign(-9));
+
+//////////////
+const myArr = [ 4, 5, 6.6, -7, 8.0, 9.9, 100]
+
+const squareList = (arr) => {
+  return arr.filter( num => Number.isInteger(num) && num > 4 ).map( x => x * x );
+}
+
+console.log(squareList(myArr));
+
+///////////////
+const arrConcat = (arr1, arr2) => arr1.concat(arr2);
+
+const a1 = [1,2,3], a2=[3,4,5,6];
+let aa = arrConcat (a1,a2);
+
+console.log(aa);
+
+
+/////////////
+const checkDate = () => new Date();
+
+console.log(checkDate());
+console.log(checkDate());
+
+
+// const sum = (function() {
+//     return function sum(x, y, z) {
+//         const args =[ x, y, z];
+//         return args.reduce( (a, b) => a + b, 0);
+//     };
+// })();
+
+// console.log(sum(1,2,3));
+
+
+const sum = (function() {
+    return function sum(...args) {
+        return args.reduce( (a, b) => a + b, 0);
+    };
+})();
+
+console.log(sum(1,2,3,4,5));
+
+CONST inc = (function () {
+    return function f(base, value = 1) {
+        return base + value;
+    };
+})();
+
+CONST dec = (function () {
+    return function f(base, value = 1) {
+        return base - value;
+    };
+})();
+
+console.log(inc(8, 4));
+console.log(dec(58));
+
+///////////
+// function checkSign (num) {
+//   return num > 0 ? "positive" : num < 0 ? "negative" : "zero";
+// }
+CONST checkSign  = num => num > 0 ? "positive" : num < 0 ? "negative" : "zero";
+
+console.log(checkSign(-9));
+
+//////////////
+CONST myArr = [ 4, 5, 6.6, -7, 8.0, 9.9, 100]
+
+CONST squareList = (arr) => {
+  return arr.filter( num => Number.isInteger(num) && num > 4 ).map( x => x * x );
+}
+
+console.log(squareList(myArr));
+
+///////////////
+CONST arrConcat = (arr1, arr2) => arr1.concat(arr2);
+
+CONST a1 = [1,2,3], a2=[3,4,5,6];
+let aa = arrConcat (a1,a2);
+
+console.log(aa);
+
+
+/////////////
+CONST checkDate = () => new Date();
+
+console.log(checkDate());
+console.log(checkDate());
+
+
+// CONST sum = (function() {
+//     return function sum(x, y, z) {
+//         CONST args =[ x, y, z];
+//         return args.reduce( (a, b) => a + b, 0);
+//     };
+// })();
+
+// console.log(sum(1,2,3));
+
+
+CONST sum = (function() {
+    return function sum(...args) {
+        return args.reduce( (a, b) => a + b, 0);
+    };
+})();
+
+console.log(sum(1,2,3,4,5));
